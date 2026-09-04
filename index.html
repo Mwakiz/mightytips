@@ -1,611 +1,702 @@
 
+  
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="author" content="Victonic Sports">
-    <meta name="description" content="Oddspredicts offers sure soccer betting tips, including fixed matches, daily odds, and SportPesa jackpots. Subscribe for guaranteed wins!">
-    <meta name="keywords" content="soccer tips, fixed matches, betting tips, SportPesa jackpot, daily odds, sure bets, Victonic Sports">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="MightyTips">
-    <meta property="og:description" content="Get reliable soccer betting tips with Oddspredicts. Subscribe for fixed matches, daily odds, and SportPesa jackpots.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mightytips-phi.vercel.app/">
-    <meta property="og:image" content="https://images.unsplash.com/photo-A8bY9zE1BQU?auto=format&fit=crop&w=800&q=80">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Mightytips">
-    <meta name="twitter:description" content="Get reliable soccer betting tips with Oddspredicts. Subscribe for fixed matches, daily odds, and SportPesa jackpots.">
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-A8bY9zE1BQU?auto=format&fit=crop&w=800&q=80">
-    <title>Oddspredicts | Sure Tips</title>
-    <link rel="icon" type="image/gif" href="/tab.gif"/>
-    <link rel="shortcut icon" href="https://images.unsplash.com/photo-C3gjLSgTKNw?auto=format&fit=crop&w=800&q=80">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://images.unsplash.com/photo-C3gjLSgTKNw?auto=format&fit=crop&w=800&q=80">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://images.unsplash.com/photo-C3gjLSgTKNw?auto=format&fit=crop&w=800&q=80">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://images.unsplash.com/photo-C3gjLSgTKNw?auto=format&fit=crop&w=800&q=80">
-    <link rel="apple-touch-icon-precomposed" href="https://images.unsplash.com/photo-C3gjLSgTKNw?auto=format&fit=crop&w=800&q=80">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&family=Paytone+One&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Josefin Sans', sans-serif;
-            background: #0f1929 url('paper.gif') repeat top left;
-            color: #ffffff;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 1200px;
-            padding: 20px;
-        }
-        .card {
-            background: #1c1c1c;
-            border: none;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s, box-shadow 0.3s;
-            margin-bottom: 20px;
-            overflow: hidden;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
-        }
-        .card-header {
-            background: linear-gradient(90deg, #ff5733, #ff9900);
-            color: #ffffff;
-            font-family: 'Paytone One', sans-serif;
-            font-size: 1.5rem;
-            text-align: center;
-            padding: 15px;
-            border-bottom: none;
-        }
-        .card-body {
-            padding: 20px;
-            text-align: center;
-        }
-        .card-title {
-            color: #ffaa00;
-            font-size: 1.25rem;
-            margin-bottom: 10px;
-        }
-        .card-text {
-            color: #cccccc;
-            font-size: 1rem;
-            margin-bottom: 10px;
-        }
-        .card-img-top {
-            max-width: 100px;
-            height: auto;
-            margin: 10px auto;
-            display: block;
-        }
-        .btn-custom {
-            background-color: #ff0066;
-            color: #ffffff;
-            font-weight: bold;
-            border-radius: 8px;
-            padding: 10px 20px;
-            transition: background-color 0.3s;
-        }
-        .btn-custom:hover {
-            background-color: #cc0000;
-            color: #ffffff;
-        }
-        .table {
-            background: #333;
-            color: #ADD8E6;
-            border-radius: 8px;
-            overflow: hidden;
-            max-width: 100%;
-        }
-        .table th {
-            background-color: #444;
-            color: white;
-            font-weight: bold;
-            text-align: center;
-        }
-        .table td {
-            text-align: center;
-            vertical-align: middle;
-        }
-        .modal-content {
-            background: #333;
-            color: #ffffff;
-            border-radius: 15px;
-        }
-        .modal-header {
-            background: #ff5733;
-            color: #ffffff;
-            border-bottom: none;
-        }
-        .modal-title {
-            font-family: 'Paytone One', sans-serif;
-        }
-        .list-group-item {
-            background: #444;
-            color: #cccccc;
-            border: none;
-        }
-        .list-group-item strong {
-            color: #ff0066;
-        }
-        .copy-btn {
-            background-color: #ff9900;
-            border: none;
-            color: #ffffff;
-            padding: 5px 10px;
-            border-radius: 5px;
-            margin-left: 10px;
-            cursor: pointer;
-            font-size: 0.9rem;
-        }
-        .copy-btn:hover {
-            background-color: #cc7700;
-        }
-        .past-tips .card-header {
-            background: linear-gradient(45deg, #29b6f6, #4f7b86);
-        }
-        .past-tips .table {
-            background: #444;
-        }
-        @media (max-width: 767px) {
-            .card {
-                margin: 15px;
-            }
-            .card-header {
-                font-size: 1.25rem;
-            }
-            .container {
-                padding: 15px;
-            }
-        }
-    </style>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Oddspredicts",
-        "url": "https://www.Oddspredicts.com",
-        "logo": "https://images.unsplash.com/photo-A8bY9zE1BQU?auto=format&fit=crop&w=800&q=80",
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+254721553560",
-            "contactType": "customer service",
-            "availableLanguage": ["English"]
-        },
-        "sameAs": [
-            "https://twitter.com/victonic_sports",
-            "https://t.me/+GEkAL_4kqyJjNDc0"
-        ]
-    }
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            // Copy to clipboard functionality
-            $('.copy-btn').click(function() {
-                const tillNumber = $(this).data('till');
-                navigator.clipboard.writeText(tillNumber).then(() => {
-                    const tooltip = bootstrap.Tooltip.getOrCreateInstance(this);
-                    tooltip.setContent({ '.tooltip-inner': 'Copied!' });
-                    tooltip.show();
-                    setTimeout(() => tooltip.hide(), 1000);
-                });
-            });
-        });
-    </script>
-</head>
-<body>
-
-    <!-- CALL SUPPORT -->
-
-   <section class="text-center mt-4">
-       
-            <h3 style="color:white;">Contact Us</h3>
-            <h4 style="color:white;">0728832598</h4>
-            
-        </section>
-
+<head><meta charset="euc-jp">
     
-    <main class="container">
-        <section class="card">
-            <div class="card-header">Free Tip of the Day</div>
-            <div class="card-body">
-                <img class="card-img-top" src="https://media.tenor.com/4xgCjIKgI8sAAAAj/football.gif" alt="Free Soccer Betting Tip Banner" loading="lazy">
-                <!-- <h2 class="card-title">Wed, July 2, 2025 21:31 EAT</h2> --> -->
-                <p class="card-text"><strong>Newcastle – West Brom</strong></p>
-                <p class="card-text" style="color: #0000FF;"><strong>Pick:</strong> OVER 2.5</p>
-            </div>
-        </section>
+    
 
-        <section class="card">
-            <div class="card-header">DRAWS & CS</div>
-            <div class="card-body">
-                <h2 class="card-title" style="color:red;">50+ Odds</h2>
-                <h3 class="card-title" style="color:#e0e01b;">Price: KSh 1000</h3>
-                <!-- <img class="card-img-top" src="https://images.unsplash.com/photo-fFa_e614P84?auto=format&fit=crop&w=800&q=80" alt="VIP Soccer Tips Icon" loading="lazy"> -->
-                <p class="card-text">100%:</p>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Match</th>
-                            <th>Tip</th>
-                            <th>View Tip</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>XXXXX VS XXXXX</td><td>DRAW</td><td><img src="data:image/png;base64,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" width="32" height="32" alt="Locked Premium Tip" loading="lazy"></td></tr>
-                        <tr><td>XXXXX VS XXXXX</td><td>DRAW</td><td><img src="data:image/png;base64,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" width="32" height="32" alt="Locked Premium Tip" loading="lazy"></td></tr>
-                        <tr><td>XXXXX VS XXXXX</td><td>HOME WIN</td><td><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJkAAACUCAMAAAC3HHtWAAAAwFBMVEX////81zQ2Rk781iv94HP821L81zAyQ0ssQE/31TTO0dIAK1FLWF/oyzdta0n/2jMnOkP/3zIiOk/k5eZDUVggNT+nrK8vQk74+fktPkfHysygpqnV19lzcElga3GEi49qdHmYnqJ2f4QPKzaPlpqxtrlXY2m8wMIAHy3Jz9osRWP//ff97Kz83mH81Bb544796J394n7ErT6OhUSxn0BmZkoTNFDNtD1cX0qXi0MEL1DewTlATE2nmEKDfUdRWEsEFKYzAAAE6UlEQVR4nO2ba3uaMBTHS9wMWC13BRW1pdpdnNvqtVbt9/9Wq3YXEgJNSAI8z3Le9/THn3Nvuboqau7As0C+Wd7ALey/qAW3ng/fAQMA+t59UC5X17fe57qwWX63RLbWyKfCejN/1CqJKxhbIQMYAKE1LkU2d8Ii2G/ZJiVkQj9kE+y3bGFfNtiAIiNJBv2BXLDbgmBntFuJXMFdXohBGMI8bv9OXh6MM8BgaPlx7LVHbS+OfSvM4PPHssDuiWDQh6PxdPhHj2A4HY8g+aX793LAuiQwGINBC39LwXAAYhKb35UBNiWAheEkq763JqTy4k/Fg7kgJQKMZ3lVqjVL6waB8JIbzFIKWN47AgTT9JwUzkQn6G3qd9B0HEInswSXtT4ORls406XZEtun2ti7hBZtlnXxQS5siwTDCwb06R+8j6smsnS4HuYcsryRPv7Dnrj8xLtS/MD049MYE01Yl3Ixz8zphSd2LEq0e9SxNWH2MME8COqfWJRBUMAH2kBERRrWMH22IHuzB8yHmPaJPm9YKHyDO6QgFtI9ZUM0/gtGL5ZF8VAAGRr/hYe/MeJGRA64s+TLLD7FDJEdAc74c6CFPGuxKLvYGIk0i/+igLZMjkEBHVcErJ9t9GVyeEJyHPJPHJ+EPekAUf8TLxhaM7iSXaCrsyFhBts8GeUigcE9pSHVLOTa/9E+wFvRgknyOUO+hBokyeCEb4kKRghZkWb+zx4QshEfGRobkC9qh2jZ4OsCKBnngu0CgWRDxJnHGRroCMr5AtDH5PKF9RNOspbQjoIGLV9PV2SKTJEpMkWmyOpH9vk6aV84yb4g3j4X8vF1/u3jxTqIfeQzkrNv868sYPPmotF8My1hTV4jOGssmnN6sO8LxIdkay6+04L9WJTIdbbFDzqwoFGmYmdrNujG+NIlexWNLtR+Nkona/ykIvtQAdkHRabIFJkiU2SKTJEpMkUmmMw07bOZZs3ITKPzuIyiaPnYMQqwSSMzjdV6s3F0XXc2m/WKnU0Wmb3dOfrfe4Xu7LZ2PciMp30PJK23fzLqQGZHDsDNidhUk0N22qTAANicKiczV2nFLqqtWNJAApnZISl2Ua3DgCaBzF6SJXsVbckQauLJzOdDBhgAh2d60SSQZUQZa6RJIIv0TDI9qpLMOPQyyXoH+nIrgWyfCQbAvkqyznUO2XWnSrI8zSolM/I0q/RtGr3sD5wgqJJMy60a9G4k1LNjTqU9Vlppn7PDrNrulNMEWFqAFLLnzCmIQTIpk6P9lDE5PrHM21KmbYOwBpwXAaYdRQqZaewIG8qObeeUs6GYnchB6y10IpZRWxqZZtrHQzJD4eFoM27p8q4HnZfEnKavWFd0iRcXM/nf4vqpNncNzXxMJkHvhX78kU2mRcjQ7TyyiiaL7HW3Q5JTP9XkFqTZ+MThMDqQR4ZvUBvW1ymrnm3xbYBpzpBJtsQnIcgym8kjey2zqWWANTslkRFuG/pNHW6O9pow1m5qMGuQb3sbtt4phSxVzC7Wu2HxIWmm3RHPQWzZKeWCvCXfqSq/IGvmibyh6C9VkxlZS/q+6tv2KmvfdI6V3rY1c511Du3t6L3IuGtsgZ5p22qv7uubLFtXenXXjDyjd/Of/oVfkSkyRabIFJki+z/J6vtNxby236FcaaV/u6PRgZUvGlGyX9ZglP9FAHFdAAAAAElFTkSuQmCC" width="32" height="32" alt="Locked Premium Tip" loading="lazy"></td></tr>
-                    </tbody>
-                </table>
-                <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#dr">Get Slip Now</button>
-            </div>
-        </section>
-
-        <section class="card">
-            <div class="card-header">BASIC TIPS @Ksh205</div>
-            <div class="card-body">
-                <h2 class="card-title" style="color:red;">3+ Sure Odds</h2>
-                <h3 class="card-title">Price: KSh 205</h3>
-                <!-- <img class="card-img-top" src="https://images.unsplash.com/photo-IsbIDM_iV8M?auto=format&fit=crop&w=800&q=80" alt="Basic Soccer Tips Icon" loading="lazy"> -->
-                <p class="card-text">100%:</p>
-                <!-- <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Match</th>
-                            <th>Tip</th>
-                            <th>View Tip</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Konyaspor VS Galatasaray SK</td><td>1X2</td><td><img src="data:image/png;base64,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" width="32" height="32" alt="Locked Premium Tip" loading="lazy"></td></tr>
-                        <tr><td>Puszcza VS Lechia Gdansk</td><td>NG/GG</td><td><img src="data:image/png;base64,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" width="32" height="32" alt="Locked Premium Tip" loading="lazy"></td></tr>
-                        <tr><td>CD Santa Clara VS FC Porto</td><td>1X2</td><td><img src="data:image/png;base64,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" width="32" height="32" alt="Locked Premium Tip" loading="lazy"></td></tr>
-                        <tr><td>JaPS VS SalPa Salo</td><td>DC1X2</td><td><img src="data:image/png;base64,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" width="32" height="32" alt="Locked Premium Tip" loading="lazy"></td></tr>
-                    </tbody>
-                </table> -->
-                <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#mozzart">Buy Ticket Now</button>
-            </div>
-        </section>
-
-        <section class="card">
-            <div class="card-header">GOLDEN TIPS @Ksh500</div>
-            <div class="card-body">
-                <h2 class="card-title" style="color:red;">4+ Odds</h2>
-                <h3 class="card-title">Price: KSh500</h3>
-                <!-- <img class="card-img-top" src="https://images.unsplash.com/photo-IsbIDM_iV8M?auto=format&fit=crop&w=800&q=80" alt="2 Draws Soccer Tips Icon" loading="lazy"> -->
-                <p class="card-text">100%</p>
-                <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#basictips">Buy Ticket Now</button>
-            </div>
-        </section>
-
-        <section class="card">
-            <div class="card-header">VIP TICKET @Ksh650</div>
-            <div class="card-body">
-                <h2 class="card-title" style="color:red;">8+ Odds</h2>
-                <h3 class="card-title">Price: KSh650</h3>
-                <!-- <img class="card-img-top" src="https://images.unsplash.com/photo-IsbIDM_iV8M?auto=format&fit=crop&w=800&q=80" alt="1 Draw Soccer Tip Icon" loading="lazy"> -->
-                <p class="card-text">100%</p>
-                <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#Premiumtips">Buy Ticket Now</button>
-            </div>
-        </section>
-
-        <section class="card">
-            <div class="card-header">SportPesa JackPot</div>
-            <div class="card-body">
-                <h2 class="card-title">SportPesa Mega Jackpot</h2>
-                <h3 class="card-title">Price: KSh 450</h3>
-                <!-- <img class="card-img-top" src="https://images.unsplash.com/photo-A8bY9zE1BQU?auto=format&fit=crop&w=800&q=80" alt="SportPesa Jackpot Icon" loading="lazy"> -->
-                <p class="card-text">Guaranteed Bonus</p>
-                <!-- <img class="card-img-top" src="https://images.unsplash.com/photo-TH4fII_mE_4?auto=format&fit=crop&w=800&q=80" alt="SportPesa Jackpot Banner" loading="lazy"> -->
-                <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#sp">Buy Ticket Now</button>
-            </div>
-        </section>
-
-        <section class="past-tips">
-            <h1 class="text-center mb-4" style="color:#00e600;">Winning History</h1>
-            <div class="card">
-                <div class="card-header">25/08/2026 - DRAWS & CS @KSh1000</div>
-                <div class="card-body">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Team</th>
-                                <th>Tip</th>
-                                <th>Odds</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Defensor Sp Vs Rentistas</td>
-                                <td>DRAW 0:0</td>
-                                <td>3.50</td>
-                                <td><span style="color:green;">Won</span></td>
-                            </tr>
-                            <tr>
-                                <td>Annan Vs Berwick</td>
-                                <td>DRAW 2:2</td>
-                                <td>3.20</td>
-                                <td><span style="color:green;">Won</span></td>
-                            </tr>
-                            <tr>
-                                <td>Ipswich Town Vs Leicester City</td>
-                                <td>Home Win</td>
-                                <td>2.50</td>
-                                <td><span style="color:green;">Won</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p class="card-text" style="color:#990000;">Congratulation!</p>
-                    <img src="https://cliply.co/wp-content/uploads/2021/03/372103860_CHECK_MARK_400px.gif" alt="Winning Icon" width="48" height="20" loading="lazy">
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">25/08/2026 - BASIC TIPS @Ksh205</div>
-                <div class="card-body">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Team</th>
-                                <th>Tip</th>
-                                <th>Odds</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Nottingham Forest Vs Leeds</td>
-                                <td>2</td>
-                                <td>2.50</td>
-                                <td><span style="color:green;">Won</span></td>
-                            </tr>
-                            <tr>
-                                <td>Watford – Peterborough</td>
-                                <td>OV3.5</td>
-                                <td>1.70</td>
-                                <td><span style="color:green;">Won</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p class="card-text" style="color:#990000;">Congratulation!</p>
-                    <img src="https://cliply.co/wp-content/uploads/2021/03/372103860_CHECK_MARK_400px.gif" alt="Winning Icon" width="48" height="20" loading="lazy">
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">25/08/2026 - GOLDEN TIPS @KSh 550</div>
-                <div class="card-body">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Team</th>
-                                <th>Tip</th>
-                                <th>Odds</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Osters Vs Sundsvall</td>
-                                <td>Home Win</td>
-                                <td>1.80</td>
-                                <td><span style="color:green;">Won</span></td>
-                            </tr>
-                            
-                             <tr>
-                                <td>Kuwait Sc Vs Al Arabi</td>
-                                <td>OV2.5</td>
-                                <td>1.95</td>
-                                <td><span style="color:green;">Won</span></td>
-                                 
-                                 <tr>
-                                <td>Plymouth Vs Coventry</td>
-                                <td>Away Win</td>
-                                <td>1.85</td>
-                                <td><span style="color:green;">Won</span></td>
-                            </tr>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    
-                    <p class="card-text" style="color:#990000;">Congratulation!</p>
-                    <img src="https://cliply.co/wp-content/uploads/2021/03/372103860_CHECK_MARK_400px.gif" alt="Winning Icon" width="48" height="20" loading="lazy">
-                </div>
-            </div>
-
-            <!-- MEGA JACKPOT RESULTS  -->
-
-            <div class="card">
-                <div class="card-header">JACKPOT RESULTS</div>
-                <div class="card-body">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Team</th>
-                                <th>Target</th>
-                                <th>Bonus</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>SPORTPESA MEGA JACKPOT JACKPOT</td>
-                                <td>17/17</td>
-                                <td>Ksh 100,524</td>
-                                <td><span style="color:green;">WON 15/17</span></td>
-                            </tr>
-                            <tr>
-                                <td>SPORTPESA MID WEEK JACKPOT JACKPOT</td>
-                                <td>13/13</td>
-                                <td>Ksh10,228</td>
-                                <td><span style="color:green;">WON 10/13</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p class="card-text" style="color:#990000;">Congratulation!</p>
-                    <img src="https://cliply.co/wp-content/uploads/2021/03/372103860_CHECK_MARK_400px.gif" alt="Winning Icon" width="48" height="20" loading="lazy">
-                </div>
-            </div>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+  
+    <meta name="author" content="Dailysuretips">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Mbetsure | Daily Sure Tips | Betting Tips</title>
+    <!-- All in One SEO 4.2.8 - aioseo.com -->
+        <meta name="keywords" content="Fixed tips Kenya, odibets fixed, sure bets,Betika tips, free epl tips, daily sure tips">
+		<meta name="description" content="Best Football Fixed Match, Soccer Manipulated Games, Sure Fixed Matches, HT FT High Odds Tips" />
+		<meta name="robots" content="max-image-preview:large" />
+		<link rel="canonical" href="https://www.dailysuretips.com/" />
+		<link rel="next" href="https://www.dailysuretips.com/fixed/2/" />
+		<meta name="generator" content="All in One SEO (AIOSEO) 4.2.8 " />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:site_name" content="Dailysuretips | Best Football Fixed Match, Soccer Manipulated Games, Sure Fixed Matches, HT FT High Odds Tips" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="Dailysuretips" />
+		<meta property="og:description" content="Best Football Fixed Match, Soccer Manipulated Games, Sure Fixed Matches, HT FT High Odds Tips" />
+		<meta property="og:url" content="https://www.dailysuretips.com/" />
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:title" content="Dailysuretips" />
+		<meta name="twitter:description" content="Best Football Fixed Match, Soccer Manipulated Games, Sure Fixed Matches, HT FT High Odds Tips" />
+		<script type="application/ld+json" class="aioseo-schema">
+			{"@context":"https:\/\/schema.org","@graph":[{"@type":"BreadcrumbList","@id":"https:\/\/www.dailysuretips.com\/#breadcrumblist","itemListElement":[{"@type":"ListItem","@id":"https:\/\/www.dailysuretips.com\/#listItem","position":1,"item":{"@type":"WebPage","@id":"https:\/\/www.dailysuretips.com\/","name":"Home","description":"Best Football Fixed Match, Soccer Manipulated Games, Sure Fixed Matches, HT FT High Odds Tips","url":"https:\/\/www.dailysuretips.com\/"}}]},{"@type":"CollectionPage","@id":"https:\/\/www.dailysuretips.com\/#collectionpage","url":"https:\/\/www.dailysuretips.com\/","name":"Dailysuretips","description":"Best Football Fixed Match, Soccer Manipulated Games, Sure Fixed Matches, HT FT High Odds Tips","inLanguage":"en-US","isPartOf":{"@id":"https:\/\/www.dailysuretips.com\/#website"},"breadcrumb":{"@id":"https:\/\/www.dailysuretips.com\/#breadcrumblist"},"about":{"@id":"https:\/\/www.dailysuretips.com\/#organization"}},{"@type":"Organization","@id":"https:\/\/www.dailysuretips.com\/#organization","name":"Dailysuretips","url":"https:\/\/www.dailysuretips.com\/","logo":{"@type":"ImageObject","url":"https:\/\/www.dailysuretips.com\/wp-content\/uploads\/2020\/01\/cropped-Max-Bet-Fixed-Header-1.png","@id":"https:\/\/www.dailysuretips.com\/#organizationLogo","width":1000,"height":250},"image":{"@id":"https:\/\/www.dailysuretips.com\/#organizationLogo"}},{"@type":"WebSite","@id":"https:\/\/www.dailysuretips.com\/#website","url":"https:\/\/www.dailysuretips.com\/","name":"Dailysuretips","description":"Best Football Fixed Match, Soccer Manipulated Games, Sure Fixed Matches, HT FT High Odds Tips","inLanguage":"en-US","publisher":{"@id":"https:\/\/www.dailysuretips.com\/#organization"},"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/www.dailysuretips.com\/?s={search_term_string}"},"query-input":"required name=search_term_string"}}]}
+		</script>
+		<!-- All in One SEO -->
+    <link rel="icon" type="image/gif" href="/tab.gif"/>
+    <!-- core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/red.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/red.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/red.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/red.ico">
+    <link rel="apple-touch-icon-precomposed" href="images/red.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
-            
-        </section>
+<script>
+	$(document).ready(function(){
+		$("#myModal").modal('show');
+	});
+</script>
+    <style type='text/css'>@font-face{font-family:'Josefin Sans';font-style:normal;font-weight:400;src:local('Josefin Sans Regular'),local('JosefinSans-Regular'),url(//fonts.gstatic.com/s/josefinsans/v13/Qw3aZQNVED7rKGKxtqIqX5EUAnx4RHw.woff2)format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+1EA0-1EF9,U+20AB;}@font-face{font-family:'Josefin Sans';font-style:normal;font-weight:400;src:local('Josefin Sans Regular'),local('JosefinSans-Regular'),url(//fonts.gstatic.com/s/josefinsans/v13/Qw3aZQNVED7rKGKxtqIqX5EUA3x4RHw.woff2)format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;}@font-face{font-family:'Josefin Sans';font-style:normal;font-weight:400;src:local('Josefin Sans Regular'),local('JosefinSans-Regular'),url(//fonts.gstatic.com/s/josefinsans/v13/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2)format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}@font-face{font-family:'Paytone One';font-style:normal;font-weight:400;src:local('Paytone One Regular'),local('PaytoneOne-Regular'),url(//fonts.gstatic.com/s/paytoneone/v11/0nksC9P7MfYHj2oFtYm2ChTigPvNiA.woff2)format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+1EA0-1EF9,U+20AB;}@font-face{font-family:'Paytone One';font-style:normal;font-weight:400;src:local('Paytone One Regular'),local('PaytoneOne-Regular'),url(//fonts.gstatic.com/s/paytoneone/v11/0nksC9P7MfYHj2oFtYm2ChTjgPvNiA.woff2)format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;}@font-face{font-family:'Paytone One';font-style:normal;font-weight:400;src:local('Paytone One Regular'),local('PaytoneOne-Regular'),url(//fonts.gstatic.com/s/paytoneone/v11/0nksC9P7MfYHj2oFtYm2ChTtgPs.woff2)format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}</style>
+<style id='page-skin-1' type='text/css'><!--
+/*-----------------------------------------------
+Blogger Template Style
+Name:     Picture Window
+Designer: Blogger
+URL:      www.blogger.com
+----------------------------------------------- */
 
-        <section class="text-center mt-4">
-            <h3 style="color:white;">Contact Us</h3>
-            <a href="https://wa.me/254721553560?text=I'm%20interested%20in%20your%20fixed%20games%20today" rel="nofollow"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYTgqvpr98LLvgLngCLqs8KQzVjeHfDpEWAvQePFGKqBSQahiSEnBV6uHc&s=10" height="30" alt="Contact via WhatsApp" loading="lazy"></a>
-            <!-- <a href="https://twitter.com/victonic_sports" rel="nofollow"><img src="images/twitter.png" height="30" alt="Follow on Twitter" loading="lazy"></a> -->
-            <!-- <a href="https://t.me/+GEkAL_4kqyJjNDc0" rel="nofollow"><img src="images/telegram_2504941.png" height="30" alt="Join Telegram Channel" loading="lazy"></a> -->
-        </section>
+/* Content
+----------------------------------------------- */
+body {
+    
+right:0;
+font: normal normal 15px Josefin Sans;
+color: #000000;
+background:#67a8e0 repeat scroll top left;
+-moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+html body .region-inner {
+    
+min-width: 0;
+max-width: 100%;
+width: auto;
+}
+.content-outer {
+font-size: 90%;
+}
+a:link {
+text-decoration:none;
+color: #ff9900;
+}
+a:visited {
+text-decoration:none;
+color: #dd7700;
+}
+a:hover {
+text-decoration:underline;
+color: #ffaa00;
+}
+.content-outer {
+background: transparent url(http://www.animatedimages.org/img-animated-football-and-soccer-image-0093-85076.htm) repeat scroll top left;
+-moz-border-radius: 0;
+-webkit-border-radius: 0;
+-goog-ms-border-radius: 0;
+border-radius: 0;
+-moz-box-shadow: 0 0 3px rgba(0, 0, 0, .15);
+-webkit-box-shadow: 0 0 3px rgba(0, 0, 0, .15);
+-goog-ms-box-shadow: 0 0 3px rgba(0, 0, 0, .15);
+box-shadow: 0 0 3px rgba(0, 0, 0, .15);
+margin: 0 auto;
+}
+.content-inner {
+padding: 10px;
+}
+/* Header
+----------------------------------------------- */
+.header-outer {
+background: transparent none repeat-x scroll top left;
+_background-image: none;
+color: #ffffff;
+-moz-border-radius: 0;
+-webkit-border-radius: 0;
+-goog-ms-border-radius: 0;
+border-radius: 0;
+}
+.Header img, .Header #header-inner {
+-moz-border-radius: 0;
+-webkit-border-radius: 0;
+-goog-ms-border-radius: 0;
+border-radius: 0;
+}
+.header-inner .Header .titlewrapper,
+.header-inner .Header .descriptionwrapper {
+padding-left: 30px;
+padding-right: 30px;
+}
+.Header h1 {
+font: normal normal 70px Paytone One;
+text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+.Header h1 a {
+color: #ffffff;
+}
+.Header .description {
+font-size: 130%;
+}
+/* Tabs
+----------------------------------------------- */
+.tabs-inner {
+margin: .5em 15px 1em;
+padding: 0;
+}
+.tabs-inner .section {
+margin: 0;
+}
+.tabs-inner .widget ul {
+padding: 0;
+background: #1c1c1c none repeat scroll bottom;
+-moz-border-radius: 0;
+-webkit-border-radius: 0;
+-goog-ms-border-radius: 0;
+border-radius: 0;
+}
+.tabs-inner .widget li {
+border: none;
+}
+.tabs-inner .widget li a {
+display: inline-block;
+padding: .5em 1em;
+margin-right: 0;
+color: #ffffff;
+font: normal bold 18px Georgia, Utopia, 'Palatino Linotype', Palatino, serif;
+-moz-border-radius: 0 0 0 0;
+-webkit-border-top-left-radius: 0;
+-webkit-border-top-right-radius: 0;
+-goog-ms-border-radius: 0 0 0 0;
+border-radius: 0 0 0 0;
+background: transparent none no-repeat scroll top left;
+border-right: 1px solid #6cc3e6;
+}
+.tabs-inner .widget li:first-child a {
+padding-left: 1.25em;
+-moz-border-radius-topleft: 0;
+-moz-border-radius-bottomleft: 0;
+-webkit-border-top-left-radius: 0;
+-webkit-border-bottom-left-radius: 0;
+-goog-ms-border-top-left-radius: 0;
+-goog-ms-border-bottom-left-radius: 0;
+border-top-left-radius: 0;
+border-bottom-left-radius: 0;
+}
+.tabs-inner .widget li.selected a,
+.tabs-inner .widget li a:hover {
+position: relative;
+z-index: 1;
+background: #cc0000 none repeat scroll bottom;
+color: #ffffff;
+-moz-box-shadow: 0 0 0 rgba(0, 0, 0, .15);
+-webkit-box-shadow: 0 0 0 rgba(0, 0, 0, .15);
+-goog-ms-box-shadow: 0 0 0 rgba(0, 0, 0, .15);
+box-shadow: 0 0 0 rgba(0, 0, 0, .15);
+}
+/* Headings
+----------------------------------------------- */
+h2 {
+font: normal normal 18px Georgia, Utopia, 'Palatino Linotype', Palatino, serif;
+text-transform: none;
+color: #ffffff;
+margin: .5em 0;
+}
+/* Main
+----------------------------------------------- */
+.main-outer {
+background: transparent none repeat scroll top center;
+-moz-border-radius: 0 0 0 0;
+-webkit-border-top-left-radius: 0;
+-webkit-border-top-right-radius: 0;
+-webkit-border-bottom-left-radius: 0;
+-webkit-border-bottom-right-radius: 0;
+-goog-ms-border-radius: 0 0 0 0;
+border-radius: 0 0 0 0;
+-moz-box-shadow: 0 0 0 rgba(0, 0, 0, .15);
+-webkit-box-shadow: 0 0 0 rgba(0, 0, 0, .15);
+-goog-ms-box-shadow: 0 0 0 rgba(0, 0, 0, .15);
+box-shadow: 0 0 0 rgba(0, 0, 0, .15);
+}
+.main-inner {
+padding: 15px 20px 20px;
+}
+.main-inner .column-center-inner {
+padding: 0 0;
+}
+.main-inner .column-left-inner {
+padding-left: 0;
+}
+.main-inner .column-right-inner {
+padding-right: 0;
+}
+/* Posts
+----------------------------------------------- */
+h3.post-title {
+margin: 0;
+font: normal normal 18px Georgia, Utopia, 'Palatino Linotype', Palatino, serif;
+}
+.comments h4 {
+margin: 1em 0 0;
+font: normal normal 18px Georgia, Utopia, 'Palatino Linotype', Palatino, serif;
+}
+.date-header span {
+color: #cccccc;
+}
+.post-outer {
+background-color: #1c1c1c;
+border: solid 1px transparent;
+-moz-border-radius: 0;
+-webkit-border-radius: 0;
+border-radius: 0;
+-goog-ms-border-radius: 0;
+padding: 15px 20px;
+margin: 0 -20px 20px;
+}
+.post-body {
+line-height: 1.4;
+font-size: 110%;
+position: relative;
+}
+.post-header {
+margin: 0 0 1.5em;
+color: #999999;
+line-height: 1.6;
+}
+.post-footer {
+margin: .5em 0 0;
+color: #999999;
+line-height: 1.6;
+}
+#blog-pager {
+font-size: 140%
+}
+#comments .comment-author {
+padding-top: 1.5em;
+border-top: dashed 1px #ccc;
+border-top: dashed 1px rgba(128, 128, 128, .5);
+background-position: 0 1.5em;
+}
+#comments .comment-author:first-child {
+padding-top: 0;
+border-top: none;
+}
+.avatar-image-container {
+margin: .2em 0 0;
+}
+/* Comments
+----------------------------------------------- */
+.comments .comments-content .icon.blog-author {
+background-repeat: no-repeat;
+background-image: url(data:image/png;base64,iVBORw0KGf9m5PCwpwb1EG9XyJgwVosLWYX7URUBcFQiWRz278L450IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB9sLFwMeCjjhcOMAAAD+SURBVDjLtZSvTgNBEIe/WRRnm1FFRitFm5rLQihCFPSNPkwLNBTbVZHUAnYc5iRYaWz9em4OZo9stoVjC/zc7ky+zH9hXwhQSkYKzyqhjnipro4bhsXHtAtTJD6dbR0G4BrLQihCFPSNPkwLNBTbVZHUAnYc5iRYaWz9emU4nUMXATCofc6MNQ6hwaiAovSDSnetSUozuikToxaPbF5vWtANQoBJqYKAGMEQrLE8L80UpKoqokjWwCztrMuBhEhmh8bD5UDqur75asbcX0BGUB9/HAMB+r32hznJgXy2v0sGLBcyAJ1EK3LFcbo1s91JeLwAbwGYu7TP/1FFRitFm5rP5oY5aeTeDikpQiWRz278L45ggg==);
+}
+.comments .comments-content .loadmore a {
+border-top: 1px solid #ffaa00;
+border-bottom: 1px solid #ffaa00;
+}
+.comments .continue {
+border-top: 2px solid #ffaa00;
+}
+/* Widgets
+----------------------------------------------- */
+.widget ul, .widget #ArchiveList ul.flat {
+padding: 0;
+list-style: none;
+}
+.widget ul li, .widget #ArchiveList ul.flat li {
+border-top: dashed 1px #ccc;
+border-top: dashed 1px rgba(128, 128, 128, .5);
+}
+.widget ul li:first-child, .widget #ArchiveList ul.flat li:first-child {
+border-top: none;
+}
+.widget .post-body ul {
+list-style: disc;
+}
+.widget .post-body ul li {
+border: none;
+}
+/* Footer
+----------------------------------------------- */
+.footer-outer {
+color:#cccccc;
+background: transparent none repeat scroll top center;
+-moz-border-radius: 0 0 0 0;
+-webkit-border-top-left-radius: 0;
+-webkit-border-top-right-radius: 0;
+-webkit-border-bottom-left-radius: 0;
+-webkit-border-bottom-right-radius: 0;
+-goog-ms-border-radius: 0 0 0 0;
+border-radius: 0 0 0 0;
+-moz-box-shadow: 0 0 0 rgba(0, 0, 0, .15);
+-webkit-box-shadow: 0 0 0 rgba(0, 0, 0, .15);
+-goog-ms-box-shadow: 0 0 0 rgba(0, 0, 0, .15);
+box-shadow: 0 0 0 rgba(0, 0, 0, .15);
+}
+.footer-inner {
+padding: 10px 20px 20px;
+}
+.footer-outer a {
+color: #ff9900;
+}
+.footer-outer a:visited {
+color: #dd7700;
+}
+.footer-outer a:hover {
+color: #ffaa00;
+}
+.footer-outer .widget h2 {
+color: #ffffff;
+}
+/* Mobile
+----------------------------------------------- */
+html body.mobile {
+    margin:0;
+height: 100%;
+width: 100%;
+}
+html body.mobile {
+margin:0;
+height: 100%;
+background-size: 100% auto;
+width: 100%;
+}
+.mobile .body-fauxcolumn-outer {
+background: transparent none repeat scroll top left;
+}
+html .mobile .mobile-date-outer, html .mobile .blog-pager {
+border-bottom: none;
+background: transparent none repeat scroll top center;
+margin-bottom: 10px;
+}
+.mobile .date-outer {
+background: transparent none repeat scroll top center;
+}
+.mobile .header-outer, .mobile .main-outer,
+.mobile .post-outer, .mobile .footer-outer {
+-moz-border-radius: 0;
+-webkit-border-radius: 0;
+-goog-ms-border-radius: 0;
+border-radius: 0;
+}
+.mobile .content-outer,
+.mobile .main-outer,
+.mobile .post-outer {
+background: inherit;
+border: none;
+}
+.mobile .content-outer {
+font-size: 100%;
+}
+.mobile-link-button {
+background-color: #ff9900;
+}
+.mobile-link-button a:link, .mobile-link-button a:visited {
+color: #1c1c1c;
+}
+.mobile-index-contents {
+color: #cccccc;
+}
+.mobile .tabs-inner .PageList .widget-content {
+background: #00BAFF none repeat scroll bottom;
+color: #ffffff;
+}
+.mobile .tabs-inner .PageList .widget-content .pagelist-arrow {
+border-left: 1px solid #6cc3e6;
+}
+.ml3 {
+  font-weight: 900;
+  font-size: 3.5em;
+}
+.ml15 {
+  font-weight: 800;
+  font-size: 3.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+}
 
-        <div class="modal fade" id="myModal0" tabindex="-1" aria-labelledby="myModal0Label" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h3 class="modal-title" id="myModal0Label">Soccer Tips</h3>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Go to "Safaricom- Buy Goods & Services"</li>
-                            <li class="list-group-item bg-success">Enter Till No <strong>5150225</strong> (Quick Call Selections) <button class="copy-btn" data-till="5150225" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Till Number" aria-label="Copy Till Number">Copy</button></li>
-                            <li class="list-group-item"><strong>KSh 1000</strong> - 3 Fixed Games</li>
-                            <li class="list-group-item"><strong>KSh 205</strong> - Daily Odds</li>
-                            <li class="list-group-item"><strong>KSh 450</strong> - SportPesa MEGA and M-WEEK Jackpot</li>
-                        </ul>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+.ml15 .word {
+  display: inline-block;
+  line-height: 1em;
+}
+h1.ml8 {
+  font-weight: 900;
+  font-size: 4.5em;
+  color: #fff;
+  width: 3em;
+  height: 3em;
+}
 
-        <div class="modal fade" id="dr" tabindex="-1" aria-labelledby="drLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h3 class="modal-title" id="drLabel">3 Fixed Games</h3>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <h4>Get Tips Instantly</h4>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Go to "Safaricom- Buy Goods & Services"</li>
-                            <li class="list-group-item bg-success">Enter Till No <strong>5150225</strong> (Quick Call Selections) <button class="copy-btn" data-till="5150225" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Till Number" aria-label="Copy Till Number">Copy</button></li>
-                            <li class="list-group-item">Enter amount <strong>KSh 1000</strong>, click "OK"</li>
-                            <li class="list-group-item">Enter your PIN Number, click OK</li>
-                        </ul>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+.ml8 .letters-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 1em;
+}
 
-        <div class="modal fade" id="mozzart" tabindex="-1" aria-labelledby="mozzartLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h3 class="modal-title" id="mozzartLabel">3 Sure Basic Games</h3>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <h4 class="text-light" style="color:#00e600;">They are Must Win Games <span style="color:#DC143C;">(100% Sure)</span></h4>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Go to "Safaricom- Buy Goods & Services"</li>
-                            <li class="list-group-item bg-success">Enter Till No <strong>5150225</strong> (Quick Call Selections) <button class="copy-btn" data-till="5150225" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Till Number" aria-label="Copy Till Number">Copy</button></li>
-                            <li class="list-group-item">Enter amount <strong>KSh 205</strong>, click "OK"</li>
-                            <li class="list-group-item">Enter your PIN Number, click OK</li>
-                        </ul>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+.ml8 .letters {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  line-height: 0.7em;
+  right: -0.12em;
+  top: -0.2em;
+}
 
-        <div class="modal fade" id="basictips" tabindex="-1" aria-labelledby="basictipsLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h3 class="modal-title" id="basictipsLabel">5+ Odds</h3>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <h4 class="text-light" style="color:#00e600;">Must Win Games (Draw) <span style="color:#DC143C;">(100% Sure Tips)</span></h4>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Go to "Safaricom- Buy Goods & Services"</li>
-                            <li class="list-group-item bg-success">Enter Till No <strong>5150225</strong> (Quick Call Selections) <button class="copy-btn" data-till="5150225" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Till Number" aria-label="Copy Till Number">Copy</button></li>
-                            <li class="list-group-item">Enter amount <strong>KSh 500</strong>, click "OK"</li>
-                            <li class="list-group-item">Enter your PIN Number, click OK</li>
-                        </ul>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+.ml8 .bang {
+  font-size: 1.4em;
+  top: auto;
+  left: -0.06em;
+}
 
-        <div class="modal fade" id="Premiumtips" tabindex="-1" aria-labelledby="PremiumtipsLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h3 class="modal-title" id="PremiumtipsLabel">10+ Odds</h3>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <h4 class="text-light" style="color:#00e600;">Guaranteed WIN <span style="color:#DC143C;">(100% Sure Tip)</span></h4>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Go to "Safaricom- Buy Goods & Services"</li>
-                            <li class="list-group-item bg-success">Enter Till No <strong>5150225</strong> (Quick Call Selections) <button class="copy-btn" data-till="5150225" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Till Number" aria-label="Copy Till Number">Copy</button></li>
-                            <li class="list-group-item">Enter amount <strong>KSh 650</strong>, click "OK"</li>
-                            <li class="list-group-item">Enter your PIN Number, click OK</li>
-                        </ul>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+.ml8 .circle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+}
 
-        <div class="modal fade" id="sp" tabindex="-1" aria-labelledby="spLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h3 class="modal-title" id="spLabel">SportPesa Jackpot</h3>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Go to "Safaricom- Buy Goods & Services"</li>
-                            <li class="list-group-item bg-success">Enter Till No <strong>5150225</strong> (Quick Call Selections) <button class="copy-btn" data-till="5150225" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Till Number" aria-label="Copy Till Number">Copy</button></li>
-                            <li class="list-group-item">Enter amount <strong>KSh 450</strong>, click "OK"</li>
-                            <li class="list-group-item">Enter your PIN Number, click OK</li>
-                            <li><h5 style="coloWhite;">KSh 450 SportPesa MEGA Jackpot & MidWeek</h5></li>
-                        </ul>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
+.ml8 .circle-white {
+  width: 3em;
+  height: 3em;
+  border: 2px dashed white;
+  border-radius: 2em;
+}
 
-    <script src="js/wow.min.js"></script>
-    <script>
-        new WOW().init();
+.ml8 .circle-dark {
+  width: 2.2em;
+  height: 2.2em;
+  background-color: #4f7b86;
+  border-radius: 3em;
+  z-index: 1;
+}
+
+.ml8 .circle-dark-dashed {
+  border-radius: 2.4em;
+  background-color: transparent;
+  border: 2px dashed #4f7b86;
+  width: 2.3em;
+  height: 2.3em;
+}
+
+
+
+
+
+
+--></style>
+<style>
+div {
+  
+margin:auto;
+margin-top:30px;
+width:1500px;
+max-width:100%;  <-- add this
+overflow-x: scroll;  <-- add this
+height:500px;
+background: url(paper.gif);
+
+}
+#rcorners1 {
+  border-radius: 25px;
+  margin:auto;
+margin-top:30px;
+width:1500px;
+max-width:100%;  <-- add this
+overflow-x: scroll;  <-- add this
+height:500px;
+background: #5C4033;
+}
+
+#rcorners2 {
+ border-radius: 25px;
+  margin:auto;
+margin-top:30px;
+width:1500px;
+max-width:100%;  <-- add this
+overflow-x: scroll;  <-- add this
+height:500px;
+  border: 1px solid #21adab;
+  
+}
+
+#rcorners3 {
+  border-radius: 25px;
+   margin:auto;
+margin-top:30px;
+width:1500px;
+max-width:100%;  <-- add this
+overflow-x: scroll;  <-- add this
+height:500px;
+background: black
+  /*background:#2596be url(https://images.unsplash.com/photo-1571292098320-997aa03a5d19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=340&q=80);*/
+   
+}
+#rcorners5 {
+  border-radius: 25px;
+   margin:auto;
+margin-top:30px;
+width:1500px;
+max-width:100%;  <-- add this
+overflow-x: scroll;  <-- add this
+height:500px;
+background: #008080
+  /*background:#2596be url(https://images.unsplash.com/photo-1571292098320-997aa03a5d19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=340&q=80);*/
+   
+}
+
+
+
+#rcorners20 {
+
+  margin:auto;
+width:1500px;
+max-width:100%;  <-- add this
+overflow-x: scroll;  <-- add this
+height:500px;
+  border: 2px solid #73AD21;
+  
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.blink {
+    animation: blinker 1s linear infinite;
+  }
+
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+</style>
+
+</head><!--/head-->
+
+<body oncontextmenu="return false;">
+
+
+			<div class='titlewrapper' style="background-color:Navy-blue;text-align:center">
+			<h2 class="btn btn-primary active btn-lg wow fadeInUp" data-wow-delay="0.0s"><i class="lnr lnr-exit"></i> <strong>LiveScores<br> <script> document.write(new Date().toDateString()); </script></strong></h2>
+				
+			</div>
+		
+
+				
+<div style="text-align:center" id="rcorners3">
+    <h2 class="btn btn-success active btn-lg wow fadeInUp" data-wow-delay="0.0s" ><i class="lnr lnr-exit"></i> <strong><img src="https://dailysuretips.com/images/flags/den2.png" alt="" /> Spanish Laliga</strong></h2>
+
+<table class="table">
+    
+				    <thead><tr><td style="font-weight: bold;color:#5bf5de; font-size:16px;">  </td><td style="font-weight: bold;color:#5bf5de; font-size:16px;">Home Team</td><td style="font-weight: bold;color:#5bf5de; font-size:16px;">   </td><td style="font-weight: bold;color:#5bf5de; font-size:16px;">Away Team</td></tr></thead>
+				    <tbody>
+				        <tr style="color:#fffffc;">
+				             <td ><img src="https://dailysuretips.com/ball.gif" height="40px" /></td>
+				             <td><strong>  Arsenal </strong></td>
+				             <td> <span class="btn btn-danger active "  > Not Started <br>3:1</span></td>
+			                 <td><strong>  Manchester United </strong></td>
+				             </tr>
+				         <tr style="color:#fffffc;">
+				             <td ><img src="https://dailysuretips.com/ball.gif" height="40px" /></td>
+				             <td><strong>  Arsenal </strong></td>
+				             <td class="blink" > <span class="btn btn-danger active "  > First Half <br>3:1</span></td>
+			                 <td><strong>  Manchester United </strong></td>
+				             </tr>
+				             <tbody>
+				        <tr style="color:#fffffc;">
+				             <td ><img src="https://dailysuretips.com/ball.gif" height="40px" /></td>
+				             <td><strong>  Arsenal </strong></td>
+				             <td> <span class="btn btn-danger active "  > Not Started <br>3:1</span></td>
+			                 <td><strong>  Manchester United </strong></td>
+				             </tr>
+				         <tr style="color:#fffffc;">
+				             <td ><img src="https://dailysuretips.com/ball.gif" height="40px" /></td>
+				             <td><strong>  Arsenal </strong></td>
+				             <td class="blink"> <span class="btn btn-danger active "  > First Half <br>3:1</span></td>
+			                 <td><strong>  Manchester United </strong></td>
+				             </tr>
+				         </tbody></table>
+
+</div>
+
+
+<!--/start-->
+<div style="text-align:center" id="rcorners3">
+    <h2 class="btn btn-success active btn-lg wow fadeInUp" data-wow-delay="0.0s" ><i class="lnr lnr-exit"></i> <strong><img src="https://dailysuretips.com/images/flags/den2.png" alt="" /> English Premier League</strong></h2>
+
+<table class="table">
+    
+				    <thead><tr><td style="font-weight: bold;color:#5bf5de; font-size:16px;">  </td><td style="font-weight: bold;color:#5bf5de; font-size:16px;">Home Team</td><td style="font-weight: bold;color:#5bf5de; font-size:16px;">   </td><td style="font-weight: bold;color:#5bf5de; font-size:16px;">Away Team</td></tr></thead>
+				    <tbody>
+				        <tr style="color:#fffffc;">
+				             <td ><img src="https://dailysuretips.com/ball.gif" height="40px" /></td>
+				             <td><strong>  Arsenal </strong></td>
+				             <td> <span class="btn btn-danger active "  > Not Started <br>3:1</span></td>
+			                 <td><strong>  Manchester United </strong></td>
+				             </tr>
+				         <tr style="color:#fffffc;">
+				             <td ><img src="https://dailysuretips.com/ball.gif" height="40px" /></td>
+				             <td><strong>  Arsenal </strong></td>
+				             <td> <span class="btn btn-danger active "  > First Half <br>3:1</span></td>
+			                 <td><strong>  Manchester United </strong></td>
+				             </tr>
+				             <tbody>
+				        <tr style="color:#fffffc;">
+				             <td ><img src="https://dailysuretips.com/ball.gif" height="40px" /></td>
+				             <td><strong>  Arsenal </strong></td>
+				             <td> <span class="btn btn-danger active "  > Not Started <br>3:1</span></td>
+			                 <td><strong>  Manchester United </strong></td>
+				             </tr>
+				         <tr style="color:#fffffc;">
+				             <td ><img src="https://dailysuretips.com/ball.gif" height="40px" /></td>
+				             <td><strong>  Arsenal </strong></td>
+				             <td> <span class="btn btn-danger active "  > First Half <br>3:1</span></td>
+			                 <td><strong>  Manchester United </strong></td>
+				             </tr>
+				         </tbody></table>
+
+</div>
+                                     
+<!--/end-->
+
+
+
+                
+    
+
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript">
+        $('.carousel').carousel()
     </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="js/wow.min.js"></script>   
 </body>
 </html>
