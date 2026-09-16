@@ -1,10 +1,10 @@
 {
-    "visibility": true,
-    "tillNumber": "4050222",
-    "tillName": "Dennis Melly",
-    "showBannerAd": true,
-    "showInterstitialAd": true,
-    "showNativeAd": true,
+    "visibility": false,
+    "tillNumber": "5150225",
+    "tillName": "Quick Call Selection",
+    "showBannerAd": false,
+    "showInterstitialAd": false,
+    "showNativeAd": false,
     "plans": [
         {
             "name": "Free Tips",
