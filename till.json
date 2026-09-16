@@ -141,19 +141,19 @@
     ],
     "freePredictions": [
         {
-            "fixture": "Union Berlin vs Sporting de Braga",
-            "prediction": "GG",
-            "date": "03/10/2023"
+            "fixture": "Coventry – Aston Villa",
+            "prediction": "OV2.5",
+            "date": "16/09/2026"
         },
         {
-            "fixture": "Ipswich Town vs Hull City",
-            "prediction": "Home Win",
-            "date": "03/10/2023"
+            "fixture": "Coventry – Aston Villa",
+            "prediction": "OV2.5",
+            "date": "16/16/2026"
         },
         {
-            "fixture": "Luton Town vs Burnley",
-            "prediction": "GG",
-            "date": "03/10/2023"
+            "fixture": "Coventry – Aston Villa",
+            "prediction": "OV2.5",
+            "date": "16/09/2026"
         },
         {
             "fixture": "Notts County vs Swindon",
@@ -161,11 +161,13 @@
             "date": "03/10/2023"
         },
         {
-            "fixture": "Ural vs Rubin Kazan",
+            "fixture": "Coventry – Aston Villa",
             "prediction": "Over 2.5",
-            "date": "03/10/2023"
+            "date": "16/09/2026"
         }
     ],
+
+    
     "correctScore": [
         {
             "fixture": "Ludogorets Razgrad- : -Lokomotiv Sofia",
@@ -193,6 +195,8 @@
             "date": "11/10/2022"
         }
     ],
+
+    
     "paidPredictions": [
         {
             "fixture": "FC Red Bull Salzburg vs Real Sociedad",
@@ -275,6 +279,8 @@
             "date": "03/10/2023"
         }
     ],
+
+    
     "predictionResults": [
         {
             "date": "Monday, 2nd October 2023",
