@@ -1,7 +1,7 @@
 {
     "visibility": true,
     "tillNumber": "4050222",
-    "tillName": "Quick Call Selections",
+    "tillName": "Dennis Melly",
     "showBannerAd": true,
     "showInterstitialAd": true,
     "showNativeAd": true,
@@ -54,24 +54,24 @@
     ],
     "jackpotPredictions": [
         {
-            "fixture": "Werder Bremen vs TSG Hoffenheim",
+            "fixture": "Coventry – Aston Villa",
             "prediction": "1",
-            "date": "07/10/2023"
+            "date": "16/9/2026"
         },
         {
-            "fixture": "RCD Mallorca vs Valencia CF",
+            "fixture": "Coventry – Aston Villa",
             "prediction": "X",
-            "date": "07/10/2023"
+            "date": "16/10/2023"
         },
         {
-            "fixture": "Stade Reims vs AS Monaco",
+            "fixture": "Coventry – Aston Villa",
             "prediction": "1",
-            "date": "07/10/2023"
+            "date": "16/9/2026"
         },
         {
-            "fixture": "FC Lugano vs Servette Geneva",
+            "fixture": "Coventry – Aston Villa",
             "prediction": "1X",
-            "date": "08/10/2023"
+            "date": "16/9/2026"
         },
         {
             "fixture": "West Ham United vs Newcastle United",
